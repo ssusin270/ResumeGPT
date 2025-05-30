@@ -1,0 +1,1531 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="6" failures="0" skipped="0" tests="6" time="6.713" timestamp="2025-05-26T16:33:04.376616-04:00" hostname="Lenovo"><testcase classname="" name="tests.test_config" time="0.000"><error message="collection failure">name = 'ResumeGPT2.tests.test_config', package = None
+
+    def import_module(name, package=None):
+        """Import a module.
+    
+        The 'package' argument is required when performing a relative import. It
+        specifies the package to use as the anchor point from which to resolve the
+        relative import to an absolute import.
+    
+        """
+        level = 0
+        if name.startswith('.'):
+            if not package:
+                raise TypeError("the 'package' argument is required to perform a "
+                                f"relative import for {name!r}")
+            for character in name:
+                if character != '.':
+                    break
+                level += 1
+&gt;       return _bootstrap._gcd_import(name[level:], package, level)
+
+C:\ProgramData\anaconda3\Lib\importlib\__init__.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_config', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_config', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_config', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1310: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;function _gcd_import at 0x000002490C5A80E0&gt;, args = ('ResumeGPT2.tests',), kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1310: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;function _gcd_import at 0x000002490C5A80E0&gt;, args = ('ResumeGPT2',), kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1331: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+spec = ModuleSpec(name='ResumeGPT2', loader=&lt;_frozen_importlib_external.SourceFileLoader object at 0x0000024911B22870&gt;, origi...ub\\ResumeGPT2\\__init__.py', submodule_search_locations=['C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2'])
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:935: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;_frozen_importlib_external.SourceFileLoader object at 0x0000024911B22870&gt;
+module = &lt;module 'ResumeGPT2' from 'C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2\\__init__.py'&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap_external&gt;:995: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;built-in function exec&gt;
+args = (&lt;code object &lt;module&gt; at 0x0000024911B13630, file "C:\Users\scott\OneDrive\Documents\GitHub\ResumeGPT2\__init__.py", ...-312.pyc', '__doc__': None, '__file__': 'C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2\\__init__.py', ...})
+kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from . import services
+
+__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .resume_improver import *
+
+services\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    import os
+    import time
+    import subprocess
+    from datetime import datetime
+    from typing import List, Optional
+    from bs4 import BeautifulSoup
+    import uuid
+    import requests
+    from langchain.prompts import ChatPromptTemplate
+    from langchain_core.runnables import RunnableSequence
+    from langchain_core.output_parsers import StrOutputParser
+&gt;   from ..models.resume import (
+        ResumeImproverOutput,
+        ResumeSkillsMatcherOutput,
+        ResumeSummarizerOutput,
+        ResumeSectionHighlighterOutput,
+    )
+
+services\resume_improver.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .resume import *
+
+models\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    from langchain_core.pydantic_v1 import BaseModel, Field
+    from typing import List
+&gt;   from ..prompts.prompts import Prompts
+
+models\resume.py:3: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .prompts import Prompts
+
+prompts\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    from langchain.prompts import ChatPromptTemplate, HumanMessagePromptTemplate
+    from langchain.schema import HumanMessage, SystemMessage
+    import yaml
+&gt;   from .. import config
+
+prompts\prompts.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .config import *
+
+config\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    import logging
+    import os
+    import configparser
+    from langchain_openai import ChatOpenAI
+    
+    # Initialize logger
+    logger = logging.getLogger(__name__)
+    
+    # Your resume filename here:
+    YOUR_RESUME_NAME = "sample_resume.yaml"
+    
+    # Define project paths
+    PROJECT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    DATA_PATH = os.path.join(PROJECT_PATH, "data")
+    TESTS_DATA_PATH = os.path.join(PROJECT_PATH, "tests/test_data/")
+    DEFAULT_RESUME_PATH = os.path.join(DATA_PATH, YOUR_RESUME_NAME)
+    BACKGROUND_TASKS_LOG = os.path.join(DATA_PATH, "background_tasks", "tasks.log")
+    RESOURCES_PATH = os.path.join(PROJECT_PATH, "resources")
+    PROMPTS_PATH = os.path.join(PROJECT_PATH, "prompts")
+    CONFIG_PATH = os.path.join(PROJECT_PATH, "config")
+    PROMPTS_YAML = os.path.join(PROMPTS_PATH, "prompts.yaml")
+    DESCRIPTIONS_YAML = os.path.join(PROMPTS_PATH, "extractor_descriptions.yaml")
+    REQUESTS_HEADERS = {
+        "User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582"
+    }
+    
+    # Define model configuration
+    CHAT_MODEL = ChatOpenAI
+    MODEL_NAME = "gpt-4o"
+    TEMPERATURE = 0.3
+    OPEN_FILE_COMMAND = "cursor -r"
+    #OPEN_FILE_COMMAND = "code -r"
+    MAX_CONCURRENT_WORKERS = 4
+    MAX_RETRIES = 3
+    BACKOFF_FACTOR = 5
+    
+    
+    # Confirm presence of OpenAI API key
+    def ensure_openai_api_key():
+        if "OPENAI_API_KEY" not in os.environ:
+            logger.info(
+                "OPENAI_API_KEY not found in environment. User will be prompted to enter their key."
+            )
+            os.environ["OPENAI_API_KEY"] = input("Enter your OpenAI API key:")
+    
+    
+&gt;   ensure_openai_api_key()
+
+config\config.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def ensure_openai_api_key():
+        if "OPENAI_API_KEY" not in os.environ:
+            logger.info(
+                "OPENAI_API_KEY not found in environment. User will be prompted to enter their key."
+            )
+&gt;           os.environ["OPENAI_API_KEY"] = input("Enter your OpenAI API key:")
+
+config\config.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;_pytest.capture.DontReadFromInput object at 0x000002490D824140&gt;, size = -1
+
+    def read(self, size: int = -1) -&gt; str:
+&gt;       raise OSError(
+            "pytest: reading from stdin while output is captured!  Consider using `-s`."
+        )
+E       OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
+
+..\..\..\..\AppData\Roaming\Python\Python312\site-packages\_pytest\capture.py:227: OSError</error></testcase><testcase classname="" name="tests.test_models" time="0.000"><error message="collection failure">name = 'ResumeGPT2.tests.test_models', package = None
+
+    def import_module(name, package=None):
+        """Import a module.
+    
+        The 'package' argument is required when performing a relative import. It
+        specifies the package to use as the anchor point from which to resolve the
+        relative import to an absolute import.
+    
+        """
+        level = 0
+        if name.startswith('.'):
+            if not package:
+                raise TypeError("the 'package' argument is required to perform a "
+                                f"relative import for {name!r}")
+            for character in name:
+                if character != '.':
+                    break
+                level += 1
+&gt;       return _bootstrap._gcd_import(name[level:], package, level)
+
+C:\ProgramData\anaconda3\Lib\importlib\__init__.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_models', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_models', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_models', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1310: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;function _gcd_import at 0x000002490C5A80E0&gt;, args = ('ResumeGPT2.tests',), kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1310: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;function _gcd_import at 0x000002490C5A80E0&gt;, args = ('ResumeGPT2',), kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1331: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+spec = ModuleSpec(name='ResumeGPT2', loader=&lt;_frozen_importlib_external.SourceFileLoader object at 0x00000249130418B0&gt;, origi...ub\\ResumeGPT2\\__init__.py', submodule_search_locations=['C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2'])
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:935: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;_frozen_importlib_external.SourceFileLoader object at 0x00000249130418B0&gt;
+module = &lt;module 'ResumeGPT2' from 'C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2\\__init__.py'&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap_external&gt;:995: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;built-in function exec&gt;
+args = (&lt;code object &lt;module&gt; at 0x0000024912FC1630, file "C:\Users\scott\OneDrive\Documents\GitHub\ResumeGPT2\__init__.py", ...-312.pyc', '__doc__': None, '__file__': 'C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2\\__init__.py', ...})
+kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from . import services
+
+__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .resume_improver import *
+
+services\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    import os
+    import time
+    import subprocess
+    from datetime import datetime
+    from typing import List, Optional
+    from bs4 import BeautifulSoup
+    import uuid
+    import requests
+    from langchain.prompts import ChatPromptTemplate
+    from langchain_core.runnables import RunnableSequence
+    from langchain_core.output_parsers import StrOutputParser
+&gt;   from ..models.resume import (
+        ResumeImproverOutput,
+        ResumeSkillsMatcherOutput,
+        ResumeSummarizerOutput,
+        ResumeSectionHighlighterOutput,
+    )
+
+services\resume_improver.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .resume import *
+
+models\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    from langchain_core.pydantic_v1 import BaseModel, Field
+    from typing import List
+&gt;   from ..prompts.prompts import Prompts
+
+models\resume.py:3: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .prompts import Prompts
+
+prompts\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    from langchain.prompts import ChatPromptTemplate, HumanMessagePromptTemplate
+    from langchain.schema import HumanMessage, SystemMessage
+    import yaml
+&gt;   from .. import config
+
+prompts\prompts.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .config import *
+
+config\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    import logging
+    import os
+    import configparser
+    from langchain_openai import ChatOpenAI
+    
+    # Initialize logger
+    logger = logging.getLogger(__name__)
+    
+    # Your resume filename here:
+    YOUR_RESUME_NAME = "sample_resume.yaml"
+    
+    # Define project paths
+    PROJECT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    DATA_PATH = os.path.join(PROJECT_PATH, "data")
+    TESTS_DATA_PATH = os.path.join(PROJECT_PATH, "tests/test_data/")
+    DEFAULT_RESUME_PATH = os.path.join(DATA_PATH, YOUR_RESUME_NAME)
+    BACKGROUND_TASKS_LOG = os.path.join(DATA_PATH, "background_tasks", "tasks.log")
+    RESOURCES_PATH = os.path.join(PROJECT_PATH, "resources")
+    PROMPTS_PATH = os.path.join(PROJECT_PATH, "prompts")
+    CONFIG_PATH = os.path.join(PROJECT_PATH, "config")
+    PROMPTS_YAML = os.path.join(PROMPTS_PATH, "prompts.yaml")
+    DESCRIPTIONS_YAML = os.path.join(PROMPTS_PATH, "extractor_descriptions.yaml")
+    REQUESTS_HEADERS = {
+        "User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582"
+    }
+    
+    # Define model configuration
+    CHAT_MODEL = ChatOpenAI
+    MODEL_NAME = "gpt-4o"
+    TEMPERATURE = 0.3
+    OPEN_FILE_COMMAND = "cursor -r"
+    #OPEN_FILE_COMMAND = "code -r"
+    MAX_CONCURRENT_WORKERS = 4
+    MAX_RETRIES = 3
+    BACKOFF_FACTOR = 5
+    
+    
+    # Confirm presence of OpenAI API key
+    def ensure_openai_api_key():
+        if "OPENAI_API_KEY" not in os.environ:
+            logger.info(
+                "OPENAI_API_KEY not found in environment. User will be prompted to enter their key."
+            )
+            os.environ["OPENAI_API_KEY"] = input("Enter your OpenAI API key:")
+    
+    
+&gt;   ensure_openai_api_key()
+
+config\config.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def ensure_openai_api_key():
+        if "OPENAI_API_KEY" not in os.environ:
+            logger.info(
+                "OPENAI_API_KEY not found in environment. User will be prompted to enter their key."
+            )
+&gt;           os.environ["OPENAI_API_KEY"] = input("Enter your OpenAI API key:")
+
+config\config.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;_pytest.capture.DontReadFromInput object at 0x000002490D824140&gt;, size = -1
+
+    def read(self, size: int = -1) -&gt; str:
+&gt;       raise OSError(
+            "pytest: reading from stdin while output is captured!  Consider using `-s`."
+        )
+E       OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
+
+..\..\..\..\AppData\Roaming\Python\Python312\site-packages\_pytest\capture.py:227: OSError</error></testcase><testcase classname="" name="tests.test_pdf_generation" time="0.000"><error message="collection failure">name = 'ResumeGPT2.tests.test_pdf_generation', package = None
+
+    def import_module(name, package=None):
+        """Import a module.
+    
+        The 'package' argument is required when performing a relative import. It
+        specifies the package to use as the anchor point from which to resolve the
+        relative import to an absolute import.
+    
+        """
+        level = 0
+        if name.startswith('.'):
+            if not package:
+                raise TypeError("the 'package' argument is required to perform a "
+                                f"relative import for {name!r}")
+            for character in name:
+                if character != '.':
+                    break
+                level += 1
+&gt;       return _bootstrap._gcd_import(name[level:], package, level)
+
+C:\ProgramData\anaconda3\Lib\importlib\__init__.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_pdf_generation', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_pdf_generation', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_pdf_generation', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1310: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;function _gcd_import at 0x000002490C5A80E0&gt;, args = ('ResumeGPT2.tests',), kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1310: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;function _gcd_import at 0x000002490C5A80E0&gt;, args = ('ResumeGPT2',), kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1331: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+spec = ModuleSpec(name='ResumeGPT2', loader=&lt;_frozen_importlib_external.SourceFileLoader object at 0x00000249131BE150&gt;, origi...ub\\ResumeGPT2\\__init__.py', submodule_search_locations=['C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2'])
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:935: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;_frozen_importlib_external.SourceFileLoader object at 0x00000249131BE150&gt;
+module = &lt;module 'ResumeGPT2' from 'C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2\\__init__.py'&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap_external&gt;:995: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;built-in function exec&gt;
+args = (&lt;code object &lt;module&gt; at 0x0000024912FC2530, file "C:\Users\scott\OneDrive\Documents\GitHub\ResumeGPT2\__init__.py", ...-312.pyc', '__doc__': None, '__file__': 'C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2\\__init__.py', ...})
+kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from . import services
+
+__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .resume_improver import *
+
+services\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    import os
+    import time
+    import subprocess
+    from datetime import datetime
+    from typing import List, Optional
+    from bs4 import BeautifulSoup
+    import uuid
+    import requests
+    from langchain.prompts import ChatPromptTemplate
+    from langchain_core.runnables import RunnableSequence
+    from langchain_core.output_parsers import StrOutputParser
+&gt;   from ..models.resume import (
+        ResumeImproverOutput,
+        ResumeSkillsMatcherOutput,
+        ResumeSummarizerOutput,
+        ResumeSectionHighlighterOutput,
+    )
+
+services\resume_improver.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .resume import *
+
+models\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    from langchain_core.pydantic_v1 import BaseModel, Field
+    from typing import List
+&gt;   from ..prompts.prompts import Prompts
+
+models\resume.py:3: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .prompts import Prompts
+
+prompts\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    from langchain.prompts import ChatPromptTemplate, HumanMessagePromptTemplate
+    from langchain.schema import HumanMessage, SystemMessage
+    import yaml
+&gt;   from .. import config
+
+prompts\prompts.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .config import *
+
+config\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    import logging
+    import os
+    import configparser
+    from langchain_openai import ChatOpenAI
+    
+    # Initialize logger
+    logger = logging.getLogger(__name__)
+    
+    # Your resume filename here:
+    YOUR_RESUME_NAME = "sample_resume.yaml"
+    
+    # Define project paths
+    PROJECT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    DATA_PATH = os.path.join(PROJECT_PATH, "data")
+    TESTS_DATA_PATH = os.path.join(PROJECT_PATH, "tests/test_data/")
+    DEFAULT_RESUME_PATH = os.path.join(DATA_PATH, YOUR_RESUME_NAME)
+    BACKGROUND_TASKS_LOG = os.path.join(DATA_PATH, "background_tasks", "tasks.log")
+    RESOURCES_PATH = os.path.join(PROJECT_PATH, "resources")
+    PROMPTS_PATH = os.path.join(PROJECT_PATH, "prompts")
+    CONFIG_PATH = os.path.join(PROJECT_PATH, "config")
+    PROMPTS_YAML = os.path.join(PROMPTS_PATH, "prompts.yaml")
+    DESCRIPTIONS_YAML = os.path.join(PROMPTS_PATH, "extractor_descriptions.yaml")
+    REQUESTS_HEADERS = {
+        "User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582"
+    }
+    
+    # Define model configuration
+    CHAT_MODEL = ChatOpenAI
+    MODEL_NAME = "gpt-4o"
+    TEMPERATURE = 0.3
+    OPEN_FILE_COMMAND = "cursor -r"
+    #OPEN_FILE_COMMAND = "code -r"
+    MAX_CONCURRENT_WORKERS = 4
+    MAX_RETRIES = 3
+    BACKOFF_FACTOR = 5
+    
+    
+    # Confirm presence of OpenAI API key
+    def ensure_openai_api_key():
+        if "OPENAI_API_KEY" not in os.environ:
+            logger.info(
+                "OPENAI_API_KEY not found in environment. User will be prompted to enter their key."
+            )
+            os.environ["OPENAI_API_KEY"] = input("Enter your OpenAI API key:")
+    
+    
+&gt;   ensure_openai_api_key()
+
+config\config.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def ensure_openai_api_key():
+        if "OPENAI_API_KEY" not in os.environ:
+            logger.info(
+                "OPENAI_API_KEY not found in environment. User will be prompted to enter their key."
+            )
+&gt;           os.environ["OPENAI_API_KEY"] = input("Enter your OpenAI API key:")
+
+config\config.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;_pytest.capture.DontReadFromInput object at 0x000002490D824140&gt;, size = -1
+
+    def read(self, size: int = -1) -&gt; str:
+&gt;       raise OSError(
+            "pytest: reading from stdin while output is captured!  Consider using `-s`."
+        )
+E       OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
+
+..\..\..\..\AppData\Roaming\Python\Python312\site-packages\_pytest\capture.py:227: OSError</error></testcase><testcase classname="" name="tests.test_prompts" time="0.000"><error message="collection failure">name = 'ResumeGPT2.tests.test_prompts', package = None
+
+    def import_module(name, package=None):
+        """Import a module.
+    
+        The 'package' argument is required when performing a relative import. It
+        specifies the package to use as the anchor point from which to resolve the
+        relative import to an absolute import.
+    
+        """
+        level = 0
+        if name.startswith('.'):
+            if not package:
+                raise TypeError("the 'package' argument is required to perform a "
+                                f"relative import for {name!r}")
+            for character in name:
+                if character != '.':
+                    break
+                level += 1
+&gt;       return _bootstrap._gcd_import(name[level:], package, level)
+
+C:\ProgramData\anaconda3\Lib\importlib\__init__.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_prompts', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_prompts', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_prompts', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1310: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;function _gcd_import at 0x000002490C5A80E0&gt;, args = ('ResumeGPT2.tests',), kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1310: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;function _gcd_import at 0x000002490C5A80E0&gt;, args = ('ResumeGPT2',), kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1331: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+spec = ModuleSpec(name='ResumeGPT2', loader=&lt;_frozen_importlib_external.SourceFileLoader object at 0x00000249131BF5C0&gt;, origi...ub\\ResumeGPT2\\__init__.py', submodule_search_locations=['C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2'])
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:935: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;_frozen_importlib_external.SourceFileLoader object at 0x00000249131BF5C0&gt;
+module = &lt;module 'ResumeGPT2' from 'C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2\\__init__.py'&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap_external&gt;:995: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;built-in function exec&gt;
+args = (&lt;code object &lt;module&gt; at 0x0000024911B13B30, file "C:\Users\scott\OneDrive\Documents\GitHub\ResumeGPT2\__init__.py", ...-312.pyc', '__doc__': None, '__file__': 'C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2\\__init__.py', ...})
+kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from . import services
+
+__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .resume_improver import *
+
+services\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    import os
+    import time
+    import subprocess
+    from datetime import datetime
+    from typing import List, Optional
+    from bs4 import BeautifulSoup
+    import uuid
+    import requests
+    from langchain.prompts import ChatPromptTemplate
+    from langchain_core.runnables import RunnableSequence
+    from langchain_core.output_parsers import StrOutputParser
+&gt;   from ..models.resume import (
+        ResumeImproverOutput,
+        ResumeSkillsMatcherOutput,
+        ResumeSummarizerOutput,
+        ResumeSectionHighlighterOutput,
+    )
+
+services\resume_improver.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .resume import *
+
+models\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    from langchain_core.pydantic_v1 import BaseModel, Field
+    from typing import List
+&gt;   from ..prompts.prompts import Prompts
+
+models\resume.py:3: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .prompts import Prompts
+
+prompts\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    from langchain.prompts import ChatPromptTemplate, HumanMessagePromptTemplate
+    from langchain.schema import HumanMessage, SystemMessage
+    import yaml
+&gt;   from .. import config
+
+prompts\prompts.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .config import *
+
+config\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    import logging
+    import os
+    import configparser
+    from langchain_openai import ChatOpenAI
+    
+    # Initialize logger
+    logger = logging.getLogger(__name__)
+    
+    # Your resume filename here:
+    YOUR_RESUME_NAME = "sample_resume.yaml"
+    
+    # Define project paths
+    PROJECT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    DATA_PATH = os.path.join(PROJECT_PATH, "data")
+    TESTS_DATA_PATH = os.path.join(PROJECT_PATH, "tests/test_data/")
+    DEFAULT_RESUME_PATH = os.path.join(DATA_PATH, YOUR_RESUME_NAME)
+    BACKGROUND_TASKS_LOG = os.path.join(DATA_PATH, "background_tasks", "tasks.log")
+    RESOURCES_PATH = os.path.join(PROJECT_PATH, "resources")
+    PROMPTS_PATH = os.path.join(PROJECT_PATH, "prompts")
+    CONFIG_PATH = os.path.join(PROJECT_PATH, "config")
+    PROMPTS_YAML = os.path.join(PROMPTS_PATH, "prompts.yaml")
+    DESCRIPTIONS_YAML = os.path.join(PROMPTS_PATH, "extractor_descriptions.yaml")
+    REQUESTS_HEADERS = {
+        "User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582"
+    }
+    
+    # Define model configuration
+    CHAT_MODEL = ChatOpenAI
+    MODEL_NAME = "gpt-4o"
+    TEMPERATURE = 0.3
+    OPEN_FILE_COMMAND = "cursor -r"
+    #OPEN_FILE_COMMAND = "code -r"
+    MAX_CONCURRENT_WORKERS = 4
+    MAX_RETRIES = 3
+    BACKOFF_FACTOR = 5
+    
+    
+    # Confirm presence of OpenAI API key
+    def ensure_openai_api_key():
+        if "OPENAI_API_KEY" not in os.environ:
+            logger.info(
+                "OPENAI_API_KEY not found in environment. User will be prompted to enter their key."
+            )
+            os.environ["OPENAI_API_KEY"] = input("Enter your OpenAI API key:")
+    
+    
+&gt;   ensure_openai_api_key()
+
+config\config.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def ensure_openai_api_key():
+        if "OPENAI_API_KEY" not in os.environ:
+            logger.info(
+                "OPENAI_API_KEY not found in environment. User will be prompted to enter their key."
+            )
+&gt;           os.environ["OPENAI_API_KEY"] = input("Enter your OpenAI API key:")
+
+config\config.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;_pytest.capture.DontReadFromInput object at 0x000002490D824140&gt;, size = -1
+
+    def read(self, size: int = -1) -&gt; str:
+&gt;       raise OSError(
+            "pytest: reading from stdin while output is captured!  Consider using `-s`."
+        )
+E       OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
+
+..\..\..\..\AppData\Roaming\Python\Python312\site-packages\_pytest\capture.py:227: OSError</error></testcase><testcase classname="" name="tests.test_services" time="0.000"><error message="collection failure">name = 'ResumeGPT2.tests.test_services', package = None
+
+    def import_module(name, package=None):
+        """Import a module.
+    
+        The 'package' argument is required when performing a relative import. It
+        specifies the package to use as the anchor point from which to resolve the
+        relative import to an absolute import.
+    
+        """
+        level = 0
+        if name.startswith('.'):
+            if not package:
+                raise TypeError("the 'package' argument is required to perform a "
+                                f"relative import for {name!r}")
+            for character in name:
+                if character != '.':
+                    break
+                level += 1
+&gt;       return _bootstrap._gcd_import(name[level:], package, level)
+
+C:\ProgramData\anaconda3\Lib\importlib\__init__.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_services', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_services', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_services', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1310: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;function _gcd_import at 0x000002490C5A80E0&gt;, args = ('ResumeGPT2.tests',), kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1310: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;function _gcd_import at 0x000002490C5A80E0&gt;, args = ('ResumeGPT2',), kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1331: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+spec = ModuleSpec(name='ResumeGPT2', loader=&lt;_frozen_importlib_external.SourceFileLoader object at 0x0000024913043EC0&gt;, origi...ub\\ResumeGPT2\\__init__.py', submodule_search_locations=['C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2'])
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:935: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;_frozen_importlib_external.SourceFileLoader object at 0x0000024913043EC0&gt;
+module = &lt;module 'ResumeGPT2' from 'C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2\\__init__.py'&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap_external&gt;:995: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;built-in function exec&gt;
+args = (&lt;code object &lt;module&gt; at 0x0000024912FC1930, file "C:\Users\scott\OneDrive\Documents\GitHub\ResumeGPT2\__init__.py", ...-312.pyc', '__doc__': None, '__file__': 'C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2\\__init__.py', ...})
+kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from . import services
+
+__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .resume_improver import *
+
+services\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    import os
+    import time
+    import subprocess
+    from datetime import datetime
+    from typing import List, Optional
+    from bs4 import BeautifulSoup
+    import uuid
+    import requests
+    from langchain.prompts import ChatPromptTemplate
+    from langchain_core.runnables import RunnableSequence
+    from langchain_core.output_parsers import StrOutputParser
+&gt;   from ..models.resume import (
+        ResumeImproverOutput,
+        ResumeSkillsMatcherOutput,
+        ResumeSummarizerOutput,
+        ResumeSectionHighlighterOutput,
+    )
+
+services\resume_improver.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .resume import *
+
+models\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    from langchain_core.pydantic_v1 import BaseModel, Field
+    from typing import List
+&gt;   from ..prompts.prompts import Prompts
+
+models\resume.py:3: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .prompts import Prompts
+
+prompts\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    from langchain.prompts import ChatPromptTemplate, HumanMessagePromptTemplate
+    from langchain.schema import HumanMessage, SystemMessage
+    import yaml
+&gt;   from .. import config
+
+prompts\prompts.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .config import *
+
+config\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    import logging
+    import os
+    import configparser
+    from langchain_openai import ChatOpenAI
+    
+    # Initialize logger
+    logger = logging.getLogger(__name__)
+    
+    # Your resume filename here:
+    YOUR_RESUME_NAME = "sample_resume.yaml"
+    
+    # Define project paths
+    PROJECT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    DATA_PATH = os.path.join(PROJECT_PATH, "data")
+    TESTS_DATA_PATH = os.path.join(PROJECT_PATH, "tests/test_data/")
+    DEFAULT_RESUME_PATH = os.path.join(DATA_PATH, YOUR_RESUME_NAME)
+    BACKGROUND_TASKS_LOG = os.path.join(DATA_PATH, "background_tasks", "tasks.log")
+    RESOURCES_PATH = os.path.join(PROJECT_PATH, "resources")
+    PROMPTS_PATH = os.path.join(PROJECT_PATH, "prompts")
+    CONFIG_PATH = os.path.join(PROJECT_PATH, "config")
+    PROMPTS_YAML = os.path.join(PROMPTS_PATH, "prompts.yaml")
+    DESCRIPTIONS_YAML = os.path.join(PROMPTS_PATH, "extractor_descriptions.yaml")
+    REQUESTS_HEADERS = {
+        "User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582"
+    }
+    
+    # Define model configuration
+    CHAT_MODEL = ChatOpenAI
+    MODEL_NAME = "gpt-4o"
+    TEMPERATURE = 0.3
+    OPEN_FILE_COMMAND = "cursor -r"
+    #OPEN_FILE_COMMAND = "code -r"
+    MAX_CONCURRENT_WORKERS = 4
+    MAX_RETRIES = 3
+    BACKOFF_FACTOR = 5
+    
+    
+    # Confirm presence of OpenAI API key
+    def ensure_openai_api_key():
+        if "OPENAI_API_KEY" not in os.environ:
+            logger.info(
+                "OPENAI_API_KEY not found in environment. User will be prompted to enter their key."
+            )
+            os.environ["OPENAI_API_KEY"] = input("Enter your OpenAI API key:")
+    
+    
+&gt;   ensure_openai_api_key()
+
+config\config.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def ensure_openai_api_key():
+        if "OPENAI_API_KEY" not in os.environ:
+            logger.info(
+                "OPENAI_API_KEY not found in environment. User will be prompted to enter their key."
+            )
+&gt;           os.environ["OPENAI_API_KEY"] = input("Enter your OpenAI API key:")
+
+config\config.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;_pytest.capture.DontReadFromInput object at 0x000002490D824140&gt;, size = -1
+
+    def read(self, size: int = -1) -&gt; str:
+&gt;       raise OSError(
+            "pytest: reading from stdin while output is captured!  Consider using `-s`."
+        )
+E       OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
+
+..\..\..\..\AppData\Roaming\Python\Python312\site-packages\_pytest\capture.py:227: OSError</error></testcase><testcase classname="" name="tests.test_utils" time="0.000"><error message="collection failure">name = 'ResumeGPT2.tests.test_utils', package = None
+
+    def import_module(name, package=None):
+        """Import a module.
+    
+        The 'package' argument is required when performing a relative import. It
+        specifies the package to use as the anchor point from which to resolve the
+        relative import to an absolute import.
+    
+        """
+        level = 0
+        if name.startswith('.'):
+            if not package:
+                raise TypeError("the 'package' argument is required to perform a "
+                                f"relative import for {name!r}")
+            for character in name:
+                if character != '.':
+                    break
+                level += 1
+&gt;       return _bootstrap._gcd_import(name[level:], package, level)
+
+C:\ProgramData\anaconda3\Lib\importlib\__init__.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_utils', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_utils', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests.test_utils', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1310: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;function _gcd_import at 0x000002490C5A80E0&gt;, args = ('ResumeGPT2.tests',), kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2.tests', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1310: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;function _gcd_import at 0x000002490C5A80E0&gt;, args = ('ResumeGPT2',), kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', package = None, level = 0
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1360: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'ResumeGPT2', import_ = &lt;function _gcd_import at 0x000002490C5A80E0&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:1331: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+spec = ModuleSpec(name='ResumeGPT2', loader=&lt;_frozen_importlib_external.SourceFileLoader object at 0x00000249131728A0&gt;, origi...ub\\ResumeGPT2\\__init__.py', submodule_search_locations=['C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2'])
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:935: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;_frozen_importlib_external.SourceFileLoader object at 0x00000249131728A0&gt;
+module = &lt;module 'ResumeGPT2' from 'C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2\\__init__.py'&gt;
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap_external&gt;:995: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+f = &lt;built-in function exec&gt;
+args = (&lt;code object &lt;module&gt; at 0x0000024912343530, file "C:\Users\scott\OneDrive\Documents\GitHub\ResumeGPT2\__init__.py", ...-312.pyc', '__doc__': None, '__file__': 'C:\\Users\\scott\\OneDrive\\Documents\\GitHub\\ResumeGPT2\\__init__.py', ...})
+kwds = {}
+
+&gt;   ???
+
+&lt;frozen importlib._bootstrap&gt;:488: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from . import services
+
+__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .resume_improver import *
+
+services\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    import os
+    import time
+    import subprocess
+    from datetime import datetime
+    from typing import List, Optional
+    from bs4 import BeautifulSoup
+    import uuid
+    import requests
+    from langchain.prompts import ChatPromptTemplate
+    from langchain_core.runnables import RunnableSequence
+    from langchain_core.output_parsers import StrOutputParser
+&gt;   from ..models.resume import (
+        ResumeImproverOutput,
+        ResumeSkillsMatcherOutput,
+        ResumeSummarizerOutput,
+        ResumeSectionHighlighterOutput,
+    )
+
+services\resume_improver.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .resume import *
+
+models\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    from langchain_core.pydantic_v1 import BaseModel, Field
+    from typing import List
+&gt;   from ..prompts.prompts import Prompts
+
+models\resume.py:3: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .prompts import Prompts
+
+prompts\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    from langchain.prompts import ChatPromptTemplate, HumanMessagePromptTemplate
+    from langchain.schema import HumanMessage, SystemMessage
+    import yaml
+&gt;   from .. import config
+
+prompts\prompts.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   from .config import *
+
+config\__init__.py:1: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    import logging
+    import os
+    import configparser
+    from langchain_openai import ChatOpenAI
+    
+    # Initialize logger
+    logger = logging.getLogger(__name__)
+    
+    # Your resume filename here:
+    YOUR_RESUME_NAME = "sample_resume.yaml"
+    
+    # Define project paths
+    PROJECT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    DATA_PATH = os.path.join(PROJECT_PATH, "data")
+    TESTS_DATA_PATH = os.path.join(PROJECT_PATH, "tests/test_data/")
+    DEFAULT_RESUME_PATH = os.path.join(DATA_PATH, YOUR_RESUME_NAME)
+    BACKGROUND_TASKS_LOG = os.path.join(DATA_PATH, "background_tasks", "tasks.log")
+    RESOURCES_PATH = os.path.join(PROJECT_PATH, "resources")
+    PROMPTS_PATH = os.path.join(PROJECT_PATH, "prompts")
+    CONFIG_PATH = os.path.join(PROJECT_PATH, "config")
+    PROMPTS_YAML = os.path.join(PROMPTS_PATH, "prompts.yaml")
+    DESCRIPTIONS_YAML = os.path.join(PROMPTS_PATH, "extractor_descriptions.yaml")
+    REQUESTS_HEADERS = {
+        "User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582"
+    }
+    
+    # Define model configuration
+    CHAT_MODEL = ChatOpenAI
+    MODEL_NAME = "gpt-4o"
+    TEMPERATURE = 0.3
+    OPEN_FILE_COMMAND = "cursor -r"
+    #OPEN_FILE_COMMAND = "code -r"
+    MAX_CONCURRENT_WORKERS = 4
+    MAX_RETRIES = 3
+    BACKOFF_FACTOR = 5
+    
+    
+    # Confirm presence of OpenAI API key
+    def ensure_openai_api_key():
+        if "OPENAI_API_KEY" not in os.environ:
+            logger.info(
+                "OPENAI_API_KEY not found in environment. User will be prompted to enter their key."
+            )
+            os.environ["OPENAI_API_KEY"] = input("Enter your OpenAI API key:")
+    
+    
+&gt;   ensure_openai_api_key()
+
+config\config.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def ensure_openai_api_key():
+        if "OPENAI_API_KEY" not in os.environ:
+            logger.info(
+                "OPENAI_API_KEY not found in environment. User will be prompted to enter their key."
+            )
+&gt;           os.environ["OPENAI_API_KEY"] = input("Enter your OpenAI API key:")
+
+config\config.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;_pytest.capture.DontReadFromInput object at 0x000002490D824140&gt;, size = -1
+
+    def read(self, size: int = -1) -&gt; str:
+&gt;       raise OSError(
+            "pytest: reading from stdin while output is captured!  Consider using `-s`."
+        )
+E       OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.
+
+..\..\..\..\AppData\Roaming\Python\Python312\site-packages\_pytest\capture.py:227: OSError</error></testcase></testsuite></testsuites>

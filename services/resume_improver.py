@@ -51,9 +51,10 @@ class ResumeImprover:
         self.job_data_location = None
         self.yaml_loc = None
         self.url = url
-        self.download_and_parse_job_post()
+        self.download_and_parse_job_post(url) # SJS: corrected
         self.resume_location = resume_location or config.DEFAULT_RESUME_PATH
         self._update_resume_fields()
+        print("__init__")
 
     def _update_resume_fields(self):
         """Update the resume fields based on the current resume location."""
@@ -68,6 +69,7 @@ class ResumeImprover:
         self.projects = utils.get_dict_field(field="projects", data_dict=self.resume)
         self.skills = utils.get_dict_field(field="skills", data_dict=self.resume)
         self.objective = utils.get_dict_field(field="objective", data_dict=self.resume)
+        print("_update_resume_fields")
 
     def update_resume(self, new_resume_location):
         """Update the resume location and refresh the dependent fields.
@@ -77,6 +79,7 @@ class ResumeImprover:
         """
         self.resume_location = new_resume_location
         self._update_resume_fields()
+        print("update_resume")
 
     def _extract_html_data(self):
         """Extract text content from HTML, removing all HTML tags.
@@ -90,8 +93,9 @@ class ResumeImprover:
         except Exception as e:
             config.logger.error(f"Failed to extract HTML data: {e}")
             raise
+        print("_extact_html_data")
 
-    def _download_url(self, url=None):
+    def _download_url(self, url=None, local=False):
         """Download the content of the URL and return it as a string.
 
         Args:
@@ -106,35 +110,43 @@ class ResumeImprover:
         max_retries = config.MAX_RETRIES
         backoff_factor = config.BACKOFF_FACTOR
         use_proxy = False
+     
+        # SJS: Uncomment this to read a downloaded file
+        if url[0:4] != "http":
+            with open(url, "rt", encoding='utf-8') as file:
+                self.job_post_html_data=file.read()
+            return True
 
-        for attempt in range(max_retries):
-            try:
-                proxies = None
-                if use_proxy:
-                    proxy = FreeProxy(rand=True).get()
-                    proxies = {"http": proxy, "https": proxy}
-
-                response = requests.get(
-                    self.url, headers=config.REQUESTS_HEADERS, proxies=proxies
-                )
-                response.raise_for_status()
-                self.job_post_html_data = response.text
-                return True
-
-            except requests.RequestException as e:
-                if response.status_code == 429:
-                    config.logger.warning(
-                        f"Rate limit exceeded. Retrying in {backoff_factor * 2 ** attempt} seconds..."
+        else:    
+            for attempt in range(max_retries):
+                try:
+                    proxies = None
+                    if use_proxy:
+                        proxy = FreeProxy(rand=True).get()
+                        proxies = {"http": proxy, "https": proxy}
+    
+                    response = requests.get(
+                        self.url, headers=config.REQUESTS_HEADERS, proxies=proxies
                     )
-                    time.sleep(backoff_factor * 2**attempt)
-                    use_proxy = True
-                else:
-                    config.logger.error(f"Failed to download URL {self.url}: {e}")
-                    return False
-
-        config.logger.error(f"Exceeded maximum retries for URL {self.url}")
-        return False
-
+                    response.raise_for_status()
+                    self.job_post_html_data = response.text
+                    return True
+    
+                except requests.RequestException as e:
+                    if response.status_code == 429:
+                        config.logger.warning(
+                            f"Rate limit exceeded. Retrying in {backoff_factor * 2 ** attempt} seconds..."
+                        )
+                        time.sleep(backoff_factor * 2**attempt)
+                        use_proxy = True
+                    else:
+                        config.logger.error(f"Failed to download URL {self.url}: {e}")
+                        return False
+    
+            config.logger.error(f"Exceeded maximum retries for URL {self.url}")
+            return False
+        print("_download_url")
+        
     def download_and_parse_job_post(self, url=None):
         """Download and parse the job post from the provided URL.
 
@@ -143,7 +155,7 @@ class ResumeImprover:
         """
         if url:
             self.url = url
-        self._download_url()
+        self._download_url(url) # SJS: corrected
         self._extract_html_data()
         self.job_post = JobPost(self.job_post_raw)
         self.parsed_job = self.job_post.parse_job_post(verbose=False)
@@ -166,6 +178,7 @@ class ResumeImprover:
         utils.write_yaml(
             self.parsed_job, filename=os.path.join(self.job_data_location, "job.yaml")
         )
+        print("download_and_parse_job_post")
 
     def parse_raw_job_post(self, raw_html):
         """Download and parse the job post from the provided URL.
@@ -196,9 +209,10 @@ class ResumeImprover:
         utils.write_yaml(
             self.parsed_job, filename=os.path.join(self.job_data_location, "job.yaml")
         )
+        print("parse_raw_job_post")
 
     def create_draft_tailored_resume(
-        self, auto_open=True, manual_review=True, skip_pdf_create=False
+        self, auto_open=True, manual_review=False, skip_pdf_create=False
     ):
         """Run a full review of the resume against the job post.
 
@@ -217,7 +231,7 @@ class ResumeImprover:
         config.logger.info("Done updating...")
         self.yaml_loc = os.path.join(self.job_data_location, "resume.yaml")
         resume_dict = dict(
-            editing=True,
+            editing=False,
             basic=self.basic_info,
             objective=self.objective,
             education=self.education,
@@ -234,11 +248,12 @@ class ResumeImprover:
         config.logger.info("Saving PDF")
         if not skip_pdf_create:
             self.create_pdf(auto_open=auto_open)
+        print("create_draft_tailored_resume")
 
     pass
 
     def _create_tailored_resume_in_background(
-        self, auto_open=True, manual_review=True, background_runner=None
+        self, auto_open=True, manual_review=False, background_runner=None
     ):
         """Run a full review of the resume against the job post.
 
@@ -271,6 +286,7 @@ class ResumeImprover:
         )
         utils.write_yaml(resume_dict, filename=self.yaml_loc)
         self.resume_yaml = utils.read_yaml(filename=self.yaml_loc)
+        print("_create_tailored_resume_in_background")
 
     def create_draft_tailored_resumes_in_background(background_configs: List[dict]):
         """Run 'create_draft_tailored_resume' for multiple configurations in the background.
@@ -289,7 +305,7 @@ class ResumeImprover:
 
         def run_config(background_config, resume_improver):
             try:
-                resume_improver.download_and_parse_job_post()
+                resume_improver.download_and_parse_job_post()   
                 resume_improver._create_tailored_resume_in_background(
                     auto_open=background_config.get("auto_open", True),
                     manual_review=background_config.get("manual_review", True),
@@ -310,6 +326,7 @@ class ResumeImprover:
                 run_config, background_config, output["ResumeImprovers"][-1]
             )
         return output
+        print("create_draft_tailored_resumes_in_background")
 
     def _get_formatted_chain_inputs(self, chain, section=None):
         output_dict = {}
@@ -322,6 +339,7 @@ class ResumeImprover:
                 key, raw_self_data.get(key) or self.parsed_job.get(key)
             )
         return output_dict
+        print("_get_formatted_chain_inputs")
 
     def _chain_updater(
         self, prompt_msgs, pydantic_object, **chain_kwargs
@@ -335,6 +353,7 @@ class ResumeImprover:
         llm = create_llm(**self.llm_kwargs)
         runnable = prompt | llm.with_structured_output(schema=pydantic_object)
         return runnable
+        print("_chain_updater")
 
     def _get_degrees(self, resume: dict):
         """Extract degrees from the resume.
@@ -353,6 +372,7 @@ class ResumeImprover:
                 elif isinstance(degree["names"], str):
                     result.append(degree["names"])
         return result
+        print("_get_degrees")
 
     def _combine_skills_in_category(self, l1: list[str], l2: list[str]):
         """Combine two lists of skills without duplicating lowercase entries.
@@ -365,6 +385,7 @@ class ResumeImprover:
         for i in l2:
             if i.lower() not in l1_lower:
                 l1.append(i)
+        print("_combine_skills_in_category")
 
     def _combine_skill_lists(self, l1: list[dict], l2: list[dict]):
         """Combine two lists of skill categories without duplicating lowercase entries.
@@ -382,7 +403,8 @@ class ResumeImprover:
                 )
             else:
                 l1.append(s)
-
+        print("_combine_skill_lists")
+        
     def rewrite_section(self, section: list | str, **chain_kwargs) -> dict:
         """Rewrite a section of the resume.
 
@@ -404,6 +426,7 @@ class ResumeImprover:
             section_revised["final_answer"], key=lambda d: d["relevance"] * -1
         )
         return [s["highlight"] for s in section_revised]
+        print("rewrite_section")
 
     def rewrite_unedited_experiences(self, **chain_kwargs) -> dict:
         """Rewrite unedited experiences in the resume.
@@ -420,6 +443,7 @@ class ResumeImprover:
             exp["highlights"] = self.rewrite_section(section=exp, **chain_kwargs)
             result.append(exp)
         return result
+        print("rewrite_unedited_experiences")
 
     def rewrite_unedited_projects(self, **chain_kwargs) -> dict:
         """Rewrite unedited projects in the resume.
@@ -436,6 +460,7 @@ class ResumeImprover:
             exp["highlights"] = self.rewrite_section(section=exp, **chain_kwargs)
             result.append(exp)
         return result
+        print("rewrite_unedited_projects")
 
     def extract_matched_skills(self, **chain_kwargs) -> dict:
         """Extract matched skills from the resume and job post.
@@ -469,6 +494,7 @@ class ResumeImprover:
             )
         self._combine_skill_lists(result, self.skills)
         return result
+        print("extract_matched_skills")
 
     def write_objective(self, **chain_kwargs) -> dict:
         """Write a objective for the resume.
@@ -488,6 +514,7 @@ class ResumeImprover:
         if not objective or "final_answer" not in objective:
             return None
         return objective["final_answer"]
+        print("write_objective")
 
     def suggest_improvements(self, **chain_kwargs) -> dict:
         """Suggest improvements for the resume.
@@ -506,6 +533,7 @@ class ResumeImprover:
         if not improvements or "final_answer" not in improvements:
             return None
         return improvements["final_answer"]
+        print("suggest_improvements")
 
     def finalize(self) -> dict:
         """Finalize the resume data.
@@ -521,6 +549,7 @@ class ResumeImprover:
             projects=self.projects,
             skills=self.skills,
         )
+        print("finalize")
 
     def create_pdf(self, auto_open=True):
         """Create a PDF of the resume.
@@ -539,3 +568,4 @@ class ResumeImprover:
         if auto_open:
             subprocess.run(config.OPEN_FILE_COMMAND.split(" ") + [pdf_location])
         return pdf_location
+        print("create_pdf")

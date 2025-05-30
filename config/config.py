@@ -5,14 +5,15 @@ from langchain_openai import ChatOpenAI
 
 # Initialize logger
 logger = logging.getLogger(__name__)
+logging.basicConfig(filename='ResumeGPT.log', filemode='w', encoding='utf-8', level=logging.DEBUG)
 
 # Your resume filename here:
-YOUR_RESUME_NAME = "sample_resume.yaml"
+YOUR_RESUME_NAME = "sjs_resume.yaml"
 
 # Define project paths
 PROJECT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_PATH = os.path.join(PROJECT_PATH, "data")
-TESTS_DATA_PATH = os.path.join(PROJECT_PATH, "tests/test_data/")
+TESTS_DATA_PATH = os.path.join(PROJECT_PATH, "tests\\test_data\\")
 DEFAULT_RESUME_PATH = os.path.join(DATA_PATH, YOUR_RESUME_NAME)
 BACKGROUND_TASKS_LOG = os.path.join(DATA_PATH, "background_tasks", "tasks.log")
 RESOURCES_PATH = os.path.join(PROJECT_PATH, "resources")
@@ -28,7 +29,8 @@ REQUESTS_HEADERS = {
 CHAT_MODEL = ChatOpenAI
 MODEL_NAME = "gpt-4o"
 TEMPERATURE = 0.3
-OPEN_FILE_COMMAND = "cursor -r"
+OPEN_FILE_COMMAND = "notepad"
+#OPEN_FILE_COMMAND = "cursor -r"
 #OPEN_FILE_COMMAND = "code -r"
 MAX_CONCURRENT_WORKERS = 4
 MAX_RETRIES = 3
@@ -45,4 +47,5 @@ def ensure_openai_api_key():
 
 
 ensure_openai_api_key()
+
 

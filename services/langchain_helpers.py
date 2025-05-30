@@ -17,6 +17,7 @@ def create_llm(**kwargs):
     chat_model = kwargs.pop("chat_model", ChatOpenAI)
     kwargs.setdefault("model_name", config.MODEL_NAME)
     kwargs.setdefault("cache", False)
+    kwargs.setdefault("max_tokens", 16384)
     return chat_model(**kwargs)
 
 
